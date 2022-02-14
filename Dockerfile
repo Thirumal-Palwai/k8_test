@@ -1,7 +1,5 @@
 FROM ubuntu
 
-COPY config .
-
 RUN apt update
 
 RUN apt -y install curl
