@@ -6,10 +6,10 @@ branding:
 
 inputs:
   kubefile:
-    description: "input"
+    description: "input file"
     required: true
   command:
-    description: "execute"
+    description: "execute command"
     required: true
 
 runs:

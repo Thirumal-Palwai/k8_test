@@ -5,4 +5,4 @@ set -x
 kubeconfig=$1
 command=$2
 
-kubectl $kubeconfig $command
+kubectl --kubeconfig $kubeconfig $command
