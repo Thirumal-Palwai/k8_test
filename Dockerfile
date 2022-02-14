@@ -14,4 +14,6 @@ RUN mv ./kubectl /usr/local/bin/kubectl
 
 COPY entrypoint.sh /entrypoint.sh
 
+RUN chmod +x ./entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"] 
