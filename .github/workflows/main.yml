@@ -13,5 +13,5 @@ jobs:
     - name: "get namespace"
       uses: Thirumal-Palwai/k8_test@v1.0.0
       with:
-        manifest: config
+        kubefile: config
         command: get ns
