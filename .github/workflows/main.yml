@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@master
       
     - name: "get namespace"
-      uses: Thirumal-Palwai/k8_test@v1.0.0
+      uses: Thirumal-Palwai/k8_test@V1.0
 
       with:
         kubefile: help
