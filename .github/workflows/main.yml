@@ -9,7 +9,6 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@master
-      
     - name: "get namespace"
       uses: Thirumal-Palwai/k8_test@V1.0
 
