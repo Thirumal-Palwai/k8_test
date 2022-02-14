@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@master
       
     - name: "get namespace"
-      uses: Thirumal-Palwai/k8_test@v1.0.0
+      uses: Thirumal-Palwai/k8_test@v3.0.0
       with:
         kubefile: config
         command: get ns
