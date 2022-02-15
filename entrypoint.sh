@@ -2,7 +2,7 @@
 set -e
 set -x
 
-kubeconfig=$1
-command=$2
+KubeconfigFile=$1
+ObjectsFile=$2
 
-kubectl --kubeconfig $kubeconfig $command
+kubectl --kubeconfig $KubeconfigFile create -f $ObjectsFile

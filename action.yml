@@ -1,20 +1,20 @@
-name: "k8 commands"
-description: "execute"
+name: "k8 object creation"
+description: "This action helps in creating new object in a k8 cluster"
 branding:
   color: green
   icon: shield
 
 inputs:
-  kubefile:
-    description: "input file"
+  KubeconfigFile:
+    description: "kubeconfig file to login into k8 cluster"
     required: true
-  command:
-    description: "execute command"
+  ObjectsFile:
+    description: "yaml file to create objects in k8 cluster"
     required: true
 
 runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.kubefile }}
-    - ${{ inputs.command }}
+    - ${{ inputs.KubeconfigFile }}
+    - ${{ inputs.ObjectsFile }}
