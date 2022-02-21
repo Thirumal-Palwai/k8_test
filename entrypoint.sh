@@ -7,7 +7,7 @@ ObjectsFile=$2
 
 Namespace=$3
 
-ServiceAccout=$4
+ServiceAccount=$4
 SA_Namespace=$5
 
 export NetworkPolicy=$6
@@ -32,9 +32,9 @@ then
 kubectl --kubeconfig $KubeconfigFile create ns $Namespace
 fi
 
-if [ ! -z "$ServiceAccout" ]
+if [ ! -z "$ServiceAccount" ]
 then
-kubectl --kubeconfig $KubeconfigFile create sa $ServiceAccout -n $SA_Namespace
+kubectl --kubeconfig $KubeconfigFile create sa $ServiceAccount -n $SA_Namespace
 fi
 
 if [ ! -z "$NetworkPolicy" ]
