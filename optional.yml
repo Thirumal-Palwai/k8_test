@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: $NetworkPolicy
+  namespace: $NP_Namespace
+spec:
+  podSelector:
+    matchLabels:
+      $MatchLabel
+  ingress:
+  - from:
+    - ipBlock:
+        cidr: $IngressIP
+    ports:
+    - protocol: $IngressProtocol
+      port: $IngressPort
+  egress:
+  - to:
+    - ipBlock:
+        cidr: $EgressIP
+    ports:
+    - protocol: $EgressProtocol
+      port: $EgressPort

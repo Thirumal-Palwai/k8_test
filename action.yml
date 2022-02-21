@@ -10,7 +10,52 @@ inputs:
     required: true
   ObjectsFile:
     description: "yaml file to create objects in k8 cluster"
-    required: true
+    required: false
+
+  Namespace:
+    description: "namespace to be created"
+    required: false
+
+  ServiceAccout:
+    description: "serviceaccount to be created"
+    required: false
+  SA_Namespace:
+    description: "namespace for creating serviceaccount"
+    required: false
+    default: default
+
+  NetworkPolicy:
+    description: "networkpolicy to be created"
+    required: false
+  NP_Namespace:
+    description: "namespace for creating networkpolicy"
+    required: false
+    default: default
+  MatchLabel:
+    description: "matchlable for networkpolicy"
+    required: false
+
+  IngressIP:
+    description: "Ingress IP for networkpolicy"
+    required: false
+  IngressProtocol:
+    description: "Ingress protocol for networkpolicy"
+    required: false
+    default: TCP
+  IngressPort:
+    description: "Ingress port for networkpolicy"
+    required: false
+
+  EgressIP:
+    description: "Egress IP for networkpolicy"
+    required: false
+  EgressProtocol:
+    description: "Egress protocol for networkpolicy"
+    required: false
+    default: TCP
+  EgressPort:
+    description: "Egress port for networkpolicy"
+    required: false
 
 runs:
   using: docker
@@ -18,3 +63,15 @@ runs:
   args:
     - ${{ inputs.KubeconfigFile }}
     - ${{ inputs.ObjectsFile }}
+    - ${{ inputs.Namespace }}
+    - ${{ inputs.ServiceAccout }}
+    - ${{ inputs.SA_Namespace }}
+    - ${{ inputs.NetworkPolicy }}
+    - ${{ inputs.NP_Namespace }}
+    - ${{ inputs.MatchLabel }}
+    - ${{ inputs.IngressIP }}
+    - ${{ inputs.IngressProtocol }}
+    - ${{ inputs.IngressPort }}
+    - ${{ inputs.EgressIP }}
+    - ${{ inputs.EgressProtocol }}
+    - ${{ inputs.EgressPort }}
