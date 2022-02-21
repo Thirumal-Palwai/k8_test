@@ -39,5 +39,5 @@ fi
 
 if [ ! -z "$NetworkPolicy" ]
 then
-envsubst < optional.yml | kubectl --kubeconfig $KubeconfigFile create -f -
+envsubst < /optional.yml | kubectl --kubeconfig $KubeconfigFile create -f -
 fi

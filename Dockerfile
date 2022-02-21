@@ -12,6 +12,8 @@ RUN mv ./kubectl /usr/local/bin/kubectl
 
 COPY entrypoint.sh /entrypoint.sh
 
+COPY optional.yml /optional.yml
+
 RUN chmod +x ./entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"] 
