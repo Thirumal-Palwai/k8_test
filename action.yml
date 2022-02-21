@@ -16,7 +16,7 @@ inputs:
     description: "namespace to be created"
     required: false
 
-  ServiceAccout:
+  ServiceAccount:
     description: "serviceaccount to be created"
     required: false
   SA_Namespace:
@@ -64,7 +64,7 @@ runs:
     - ${{ inputs.KubeconfigFile }}
     - ${{ inputs.ObjectsFile }}
     - ${{ inputs.Namespace }}
-    - ${{ inputs.ServiceAccout }}
+    - ${{ inputs.ServiceAccount }}
     - ${{ inputs.SA_Namespace }}
     - ${{ inputs.NetworkPolicy }}
     - ${{ inputs.NP_Namespace }}
