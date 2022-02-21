@@ -12,7 +12,7 @@ SA_Namespace=$5
 
 export NetworkPolicy=$6
 export NP_Namespace=$7
-export MatchLabel=$8
+export MatchLabel="$8"
 export IngressIP=$9
 export IngressProtocol=$10
 export IngressPort=$11
